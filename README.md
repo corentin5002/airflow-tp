@@ -2,6 +2,12 @@
 
 To run the docker-compose, please follow the instructions from the official [Airflow documentions](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html).
 
+**To access airflow** : 
+
+- username : **airflow**
+- password : **airflow**
+
+
 # The files 
 
 My DAG is located in `dags/weatherdata.py`. containning the tasks : 
