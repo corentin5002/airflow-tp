@@ -11,7 +11,8 @@ def get_weather_data(**kwargs):
 
     key= "10298ad4ad011275f9bf76b178d85730"
     city = "Clermont-Ferrand"  
-# find city lat lon via their name
+
+    # find city lat lon via their name
     cityInfoAPI = f"http://api.openweathermap.org/data/2.5/weather?q={city},FR&appid={key}"
     
     response = rq.get(cityInfoAPI)
