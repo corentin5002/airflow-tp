@@ -9,10 +9,10 @@ from airflow.operators.python_operator import PythonOperator
 
 def get_weather_data(**kwargs):
 
-    key= "10298ad4ad011275f9bf76b178d85730"
+    key= "10298ad4ad011275f9bf76b178d85730" # Stole it I don't care
     city = "Clermont-Ferrand"  
 
-    # find city lat lon via their name
+    # Find city lat lon via their name
     cityInfoAPI = f"http://api.openweathermap.org/data/2.5/weather?q={city},FR&appid={key}"
     
     response = rq.get(cityInfoAPI)
@@ -77,7 +77,7 @@ default_args = {
 with DAG(
     'weather_dag', 
     default_args=default_args, 
-    schedule_interval='*/5 * * * *', 
+    schedule_interval='*/5 * * * *', # every 5 minutes
     catchup=False
     ) as weatherDag : 
     

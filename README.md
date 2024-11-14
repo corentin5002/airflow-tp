@@ -1,3 +1,9 @@
+# Initialize (not for production just test)
+
+Need to create an admin user in the PSQL DB : 
+
+`docker compose up airflow-init`
+
 # How to run
 
 To run the docker-compose, please follow the instructions from the official [Airflow documentions](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html).
